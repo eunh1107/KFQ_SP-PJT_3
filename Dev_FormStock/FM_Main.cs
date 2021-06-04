@@ -43,6 +43,8 @@ namespace Dev_FormStock
                 new System.Windows.Forms.ToolStripItemClickedEventHandler(BarMenu_DropDownItemClicked);
         }
 
+
+
         private void timer1_Tick(object sender, EventArgs e)
         {
             tssNowDate.Text = DateTime.Now.ToString();

@@ -83,5 +83,13 @@ namespace SP_PJT_3
                 this.Close();
             }
         }
+
+        private void txtChPw_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnChPw_Click(null, null);
+            }
+        }
     }
 }

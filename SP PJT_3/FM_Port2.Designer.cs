@@ -41,6 +41,7 @@ namespace SP_PJT_3
             this.btnSave = new System.Windows.Forms.Button();
             this.txtID = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -53,7 +54,7 @@ namespace SP_PJT_3
             // 
             this.groupBox2.Controls.Add(this.dataGridView1);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox2.Font = new System.Drawing.Font("나눔고딕코딩", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.groupBox2.Location = new System.Drawing.Point(0, 91);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(1119, 664);
@@ -63,13 +64,15 @@ namespace SP_PJT_3
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 21);
+            this.dataGridView1.Location = new System.Drawing.Point(3, 24);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(1113, 640);
+            this.dataGridView1.Size = new System.Drawing.Size(1113, 637);
             this.dataGridView1.TabIndex = 0;
             // 
             // button_매수
@@ -104,7 +107,7 @@ namespace SP_PJT_3
             // button3
             // 
             this.button3.ForeColor = System.Drawing.Color.Blue;
-            this.button3.Location = new System.Drawing.Point(303, 43);
+            this.button3.Location = new System.Drawing.Point(345, 40);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(174, 27);
             this.button3.TabIndex = 1;
@@ -115,7 +118,7 @@ namespace SP_PJT_3
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(201, 43);
+            this.checkBox1.Location = new System.Drawing.Point(243, 42);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(96, 24);
             this.checkBox1.TabIndex = 0;
@@ -157,13 +160,15 @@ namespace SP_PJT_3
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(47, 41);
+            this.txtID.Location = new System.Drawing.Point(87, 40);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(132, 27);
             this.txtID.TabIndex = 1;
+            this.txtID.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtID_KeyDown);
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.txtID);
             this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Controls.Add(this.button3);
@@ -174,6 +179,15 @@ namespace SP_PJT_3
             this.groupBox1.Size = new System.Drawing.Size(1119, 91);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(27, 43);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(54, 20);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "아이디";
             // 
             // groupBox3
             // 
@@ -196,7 +210,7 @@ namespace SP_PJT_3
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FM_Port2";
-            this.Text = "FM_Port2";
+            this.Text = "고객 관리";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -222,5 +236,6 @@ namespace SP_PJT_3
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Label label1;
     }
 }

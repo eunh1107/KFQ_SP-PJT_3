@@ -227,5 +227,13 @@ namespace SP_PJT_3
             }
         }
         #endregion
+
+        private void txtID_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                button3_Click(null, null);
+            }
+        }
     }
 }

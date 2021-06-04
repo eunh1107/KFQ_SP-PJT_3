@@ -29,12 +29,15 @@ namespace Dev_FormStock
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.BarMenu = new System.Windows.Forms.MenuStrip();
             this.CustomerMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.FM_CpCd = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.FM_Option = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.FM_Seed = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.FM_Portfolio = new System.Windows.Forms.ToolStripMenuItem();
             this.ManagerMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.FM_Port2 = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
@@ -50,6 +53,7 @@ namespace Dev_FormStock
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.FM_STOCK = new System.Windows.Forms.ToolStripMenuItem();
             this.MyTabControl1 = new Dev_FormStock.MyTabControler();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.BarMenu.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -70,13 +74,26 @@ namespace Dev_FormStock
             // CustomerMenu
             // 
             this.CustomerMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.FM_CpCd,
+            this.toolStripSeparator4,
             this.FM_Option,
             this.toolStripSeparator3,
             this.FM_Seed,
-            this.toolStripMenuItem2});
+            this.FM_Portfolio});
             this.CustomerMenu.Name = "CustomerMenu";
             this.CustomerMenu.Size = new System.Drawing.Size(88, 24);
             this.CustomerMenu.Text = "고객 메뉴";
+            // 
+            // FM_CpCd
+            // 
+            this.FM_CpCd.Name = "FM_CpCd";
+            this.FM_CpCd.Size = new System.Drawing.Size(172, 26);
+            this.FM_CpCd.Text = "오늘의 주가";
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(169, 6);
             // 
             // FM_Option
             // 
@@ -95,11 +112,11 @@ namespace Dev_FormStock
             this.FM_Seed.Size = new System.Drawing.Size(172, 26);
             this.FM_Seed.Text = "예수금 입금";
             // 
-            // toolStripMenuItem2
+            // FM_Portfolio
             // 
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(172, 26);
-            this.toolStripMenuItem2.Text = "나의 주식";
+            this.FM_Portfolio.Name = "FM_Portfolio";
+            this.FM_Portfolio.Size = new System.Drawing.Size(172, 26);
+            this.FM_Portfolio.Text = "나의 주식";
             // 
             // ManagerMenu
             // 
@@ -132,7 +149,7 @@ namespace Dev_FormStock
             // 
             this.space.AutoSize = false;
             this.space.Name = "space";
-            this.space.Size = new System.Drawing.Size(751, 20);
+            this.space.Size = new System.Drawing.Size(651, 20);
             this.space.Spring = true;
             this.space.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
@@ -147,7 +164,7 @@ namespace Dev_FormStock
             // 
             this.tssNowDate.AutoSize = false;
             this.tssNowDate.Name = "tssNowDate";
-            this.tssNowDate.Size = new System.Drawing.Size(152, 20);
+            this.tssNowDate.Size = new System.Drawing.Size(252, 20);
             this.tssNowDate.Text = "toolStripStatusLabel3";
             // 
             // toolStrip1
@@ -233,6 +250,12 @@ namespace Dev_FormStock
             this.MyTabControl1.Size = new System.Drawing.Size(1070, 698);
             this.MyTabControl1.TabIndex = 19;
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // FM_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -277,6 +300,9 @@ namespace Dev_FormStock
         private MyTabControler MyTabControl1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripMenuItem FM_Seed;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem FM_Portfolio;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.ToolStripMenuItem FM_CpCd;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
     }
 }

@@ -95,7 +95,7 @@ namespace SP_PJT_3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(407, 228);
+            this.ClientSize = new System.Drawing.Size(381, 187);
             this.Controls.Add(this.btnPWChang);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtID);

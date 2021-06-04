@@ -8,5 +8,6 @@ namespace Dev_FormStock
 { 
         public interface InterfaceSB
     {
+        void Inquire();
     }
 }
